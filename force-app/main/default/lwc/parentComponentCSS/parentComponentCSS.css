@@ -1,0 +1,9 @@
+h2{
+   color: pink;
+}
+
+c-child-Component{
+   color: blueviolet;
+   /*styling hook*/
+   --textColor: #000
+}

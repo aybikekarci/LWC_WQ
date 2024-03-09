@@ -1,0 +1,118 @@
+<!--
+  @description       : 
+  @author            : ChangeMeIn@UserSettingsUnder.SFDoc
+  @group             : 
+  @last modified on  : 03-06-2024
+  @last modified by  : ChangeMeIn@UserSettingsUnder.SFDoc
+-->
+<template>
+    
+   <lightning-card title="CSS ogreniyoruz">
+   
+     
+   
+   
+   
+   <div class="slds-grid slds-wrap    slds-box">
+       
+       <div class="slds-col slds-size_5-of-12    slds-box   slds-p-right_x-small "      >
+   
+   
+           
+           <div class="slds-grid slds-gutters">
+               
+               <div class="slds-col">
+                   <div class="slds-box slds-box_x-small  slds-align_absolute-center  ">
+                       <h1>PARENT H1 tagi</h1>
+                     </div>
+               </div>
+             
+               <div class="slds-col">
+                   <p> PARENT P tagi</p>
+               </div>
+          
+           </div>
+   
+   
+          
+   
+       </div>
+       <div class="slds-col slds-size_6-of-12 slds-box   slds-m-left_xx-small">
+           <c-child-component></c-child-component>
+       </div>
+       
+       </div>
+   
+       <div class="slds-grid slds-wrap">
+           <div class="slds-col slds-size_1-of-12">
+             <span>1</span>
+           </div>
+           
+           <div class="slds-col slds-size_10-of-12">
+               <table class="slds-table slds-table_cell-buffer slds-table_bordered" aria-label="Example default base table of Opportunities">
+                   <thead>
+                   <tr class="slds-line-height_reset">
+                   <th class="" scope="col">
+                   <div class="slds-truncate" title="Cicek Id">CICEK ID</div>
+                   </th>
+                   <th class="" scope="col">
+                   <div class="slds-truncate" title="cicek adi">Cicek Adi</div>
+                   </th>
+                   <th class="" scope="col">
+                   <div class="slds-truncate" title="cicek familya">cicek Familya</div>
+                   </th>
+                
+                 
+                  
+                   <th class="" scope="col">
+                   <div class="slds-truncate" title="cicek resmi">Cicek Resmi</div>
+                   </th>
+                   </tr>
+                   </thead>
+                   <tbody>
+                     <template for:each={cicekListesi} for:item="cicek">
+                         <tr class="slds-hint-parent"  key={cicek.id}>
+                        <th data-label="Opportunity Name" scope="row">
+                               <div class="slds-truncate" title="ad">
+                                  {cicek.id}
+                               </div>
+                        </th>
+                        <td data-label="Opportunity Name" scope="row">
+                         <div class="slds-truncate" title="ad">
+                            {cicek.name}
+                         </div>
+                       </td>
+                         <td data-label="Account Name">
+                              <div class="slds-truncate" title="familya">{cicek.familya} </div>
+                         </td>
+                         <td data-label="Close Date">
+                         <div class="slds-truncate" title="foto">
+                                 <a href={cicek.imgUrl}  tabindex="-1">
+                                      <img src={cicek.imgUrl} alt={cicek.name} width="100" height="110">
+                                 </a>
+                            </div>
+                         </td>
+                             </tr>
+                </template>
+                 </tbody>
+                   </table>
+   
+   
+   
+   
+   
+   
+           </div>
+           <div class="slds-col slds-size_1-of-12">
+               <span>1</span>
+           </div>
+          
+         </div>
+   
+   
+   </lightning-card>
+   
+   
+   
+   
+   </template>
