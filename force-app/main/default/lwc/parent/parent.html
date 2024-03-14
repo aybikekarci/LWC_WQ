@@ -1,0 +1,32 @@
+<!--
+  @description       : 
+  @author            : ChangeMeIn@UserSettingsUnder.SFDoc
+  @group             : 
+  @last modified on  : 03-07-2024
+  @last modified by  : ChangeMeIn@UserSettingsUnder.SFDoc
+-->
+<template>
+   <lightning-card title="Araba ozellikleri">
+
+      <h1> BURASI BABA</h1>
+      
+      <div class="slds-p-around_medium lgc-bg">
+          <lightning-input 
+             type="text" 
+            label="Kasa Tipi Yaziniz"
+            onblur ={handleKasaTipi}
+          >
+         </lightning-input>
+         </div>
+      
+      <br>
+      <br>
+      <c-grandchild 
+       kasa-sekli ={kasaTipi}
+       araba-modeli ={torunArabaModeli}
+      >
+      
+      </c-grandchild>
+         </lightning-card> 
+      
+</template>
