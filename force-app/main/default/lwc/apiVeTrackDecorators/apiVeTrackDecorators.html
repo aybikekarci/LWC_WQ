@@ -1,0 +1,88 @@
+<!--
+  @description       : 
+  @author            : ChangeMeIn@UserSettingsUnder.SFDoc
+  @group             : 
+  @last modified on  : 03-09-2024
+  @last modified by  : ChangeMeIn@UserSettingsUnder.SFDoc
+-->
+<template>
+    
+
+   <lightning-card title="@api decorators ">
+   
+   <h1>  RECODU ID SI >>>> {recordId}</h1>
+   <br>
+   <br>
+   <lightning-input 
+   type="text" 
+   label="Adinizi giriniz"     
+   onblur ={handleAd}
+   ></lightning-input>
+   
+   <h1>Yeni ad >>> {yeniad}</h1>
+   
+   </lightning-card>
+   
+   <br>
+   
+   
+   <lightning-card title="@track decorator object">
+   
+       <lightning-input 
+       type="text" 
+       label="Adinizi giriniz"     
+       onchange ={handleIsim}
+       ></lightning-input>
+   
+       <h1> BIREY ADI >> {birey.isim}       </h1>
+   
+   
+   
+   </lightning-card>
+   
+   
+   
+   <lightning-card title="Liste icin @track decoratori">
+   
+       <template for:each={cicekListesi} for:item="cicek">
+           <div key={cicek.id} >     
+       
+               <p> Cicek Adi>> {cicek.name} ,       </p>
+               <p>Cicek familyasi >> {cicek.familya}</p>
+                 <br> 
+           </div>
+              
+       </template>
+   
+   
+   
+   
+       <lightning-input 
+       type="text" 
+       label="Cicek adini giriniz"     
+       onchange ={handleCicekName}
+       ></lightning-input>
+   
+       <lightning-input 
+       type="text" 
+       label="Cicegin Familyansini giriniz"     
+       onchange ={handleFamilya}
+       ></lightning-input>
+   
+       <lightning-button 
+           variant="success" 
+           label="Cicek Ekle" 
+           title="Successful action" 
+           onclick={handleCicekEkle} 
+           class="slds-m-left_x-small"></lightning-button>
+   
+   </lightning-card>
+   
+   
+   
+   
+   
+   
+   
+   
+   </template>
