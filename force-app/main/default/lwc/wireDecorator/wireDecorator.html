@@ -1,0 +1,53 @@
+<!--
+  @description       : 
+  @author            : ChangeMeIn@UserSettingsUnder.SFDoc
+  @group             : 
+  @last modified on  : 03-09-2024
+  @last modified by  : ChangeMeIn@UserSettingsUnder.SFDoc
+-->
+<template>
+   <lightning-button 
+   variant="success" 
+   label="Data Console da goster" 
+   title="Successful action" 
+   onclick={handleClick}
+    class="slds-m-left_x-small"></lightning-button>
+
+    <lightning-card title="@wire decorator JS Property ile" >
+
+
+    <template for:each={accountlar.data} for:item="acc">
+        <div key={acc.id} >     
+    
+            <p> Account Adi>> {acc.Name} ,    acc tel >> {acc.Phone}       </p>
+           
+              <br> 
+        </div>
+           
+    </template>
+
+
+
+
+</lightning-card>
+
+
+<lightning-card title="@wire decorator method ile" >
+
+
+    <template for:each={accListesi} for:item="acc">
+        <div key={acc.id} >     
+    
+            <p> !!!!Account Adi>> {acc.Name} ,   !!!! acc tel >> {acc.Phone}    </p>
+           
+              <br> 
+        </div>
+           
+    </template>
+
+
+
+
+</lightning-card>
+
+</template>
