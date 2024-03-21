@@ -1,0 +1,34 @@
+<!--
+  @description       : 
+  @author            : ChangeMeIn@UserSettingsUnder.SFDoc
+  @group             : 
+  @last modified on  : 03-09-2024
+  @last modified by  : ChangeMeIn@UserSettingsUnder.SFDoc
+-->
+<template>
+   <lightning-card title="@wire decorator method ile" >
+
+
+      <template for:each={accListesi} for:item="acc">
+          <div key={acc.id} >     
+      
+              <p> !!!!Account Adi>> {acc.Name} ,   !!!! acc tel >> {acc.Phone}    </p>
+             
+                <br> 
+          </div>
+             
+      </template>
+
+      <br>
+
+      <div class="slds-p-around_medium lgc-bg">
+         <lightning-input 
+         type="text" 
+         label="Acc adini giriniz"
+         onchange={handleAccountIsim}
+         ></lightning-input>
+     </div>
+  
+  
+  </lightning-card>
+</template>
